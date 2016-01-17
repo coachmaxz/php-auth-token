@@ -7,10 +7,10 @@
 
 $mode 		= 'PDO_MYSQL'; // MYSQL, PDO_MYSQL
 
-$dbname 	= 'db_yii2-vol2';
+$dbname 	= 'db_example';
 $dbhost 	= 'localhost';
 $dbuser 	= 'root';
-$dbpass 	= '1234';
+$dbpass 	= '';
 $character 	= 'utf8';
 
 /* =============================================

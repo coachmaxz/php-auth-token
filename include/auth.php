@@ -7,7 +7,7 @@
 class Auth {
     
     public $key;
-    public $key_length = 32; // ??????? 32 ????????
+    public $key_length = 32; 
     public $app_length = 9;
     
     public $app_id;
@@ -36,13 +36,13 @@ class Auth {
             'app_id' => $this->app_id,
             'app_secret' => $this->app_secret,
             'token' => $this->token,
-            'expires' => date('Y-m-d H:i:s',time() + 3600) // 3600 = 1 ???????
+            'expires' => date('Y-m-d H:i:s',time() + 3600) //  +1 (3600) hour
         );
         
         if ($db->execute($params)){
             
             $this->message = 'Successful';
-            $this->callback = 'http://localhost/github/eakkabin/php-auth-token/validator.php?app_id=' . $this->app_id . '&app_secret=' . $this->app_secret;
+            $this->callback = 'http://localhost/php-auth-token/validator.php?app_id=' . $this->app_id . '&app_secret=' . $this->app_secret;
             
         } else {
             
